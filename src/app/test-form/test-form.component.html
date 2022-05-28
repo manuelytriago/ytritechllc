@@ -1,0 +1,19 @@
+
+  <section class="position-relative top-0 pe-0 ps-0 mw-100 light" >
+    <form [formGroup]="contactForm">
+        <input type = "text" name = "fullName" placeholder = "Your full name" formControlName="fullName" >
+        <br/>
+      
+        <input type = "email" name = "email" placeholder = "Your email" formControlName="email" >
+        <br/>
+      
+        <textarea name = "message" placeholder = "Your message" formControlName="message" ></textarea>
+        <br/>
+        
+        <button class="btn btn-primary" type="submit" (click)="enviar();" >Submit</button>
+      </form> 
+  </section>
+
+<div class="pe-0 ps-0 mw-100 light">
+    <app-footer></app-footer>
+</div>
