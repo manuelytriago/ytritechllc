@@ -46,7 +46,7 @@ build:
     paths:
       - dist/
   only:
-    - master
+    - ytritech_local
 
 pages:
   stage: deploy
@@ -62,4 +62,4 @@ pages:
   environment:
     name: production
   only:
-    - master
+    - ytritech_local
