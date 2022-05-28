@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { MainBodyComponent } from './main-body/main-body.component';
 import { FooterComponent } from './footer/footer.component';
-import { TestFormComponent } from './test-form/test-form.component';
 import { MainCompComponent } from './main-comp/main-comp.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -17,7 +16,6 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     MainBodyComponent,
     FooterComponent,
-    TestFormComponent,
     MainCompComponent,
     ContactComponent
   ],
