@@ -8,8 +8,8 @@ import { FormBuilder} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   /*FormData: FormGroup;*/
-
-  constructor(private builder: FormBuilder) { }
+  //private builder: FormBuilder
+  constructor() { }
 
   ngOnInit(): void {
     /*this.FormData = this.builder.group({
