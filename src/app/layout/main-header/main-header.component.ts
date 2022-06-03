@@ -7,16 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-header.component.css']
 })
 export class MainHeaderComponent implements OnInit {
-  router: any;
 
-  constructor(router:Router) {
-    
-   }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  goFooter(){
-    this.router.navigate(['footer']);
-  }
 
 }
+
+
