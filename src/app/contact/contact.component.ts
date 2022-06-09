@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder} from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,16 +7,31 @@ import { FormBuilder} from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  submitted = false;
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    body: new FormControl('', Validators.required)
+  });
+  get f(){
+
+    return this.form.controls;
+
+  }
+
   /*FormData: FormGroup;*/
   //private builder: FormBuilder
   constructor() { }
 
   ngOnInit(): void {
-    /*this.FormData = this.builder.group({
-      Fullname: new FormControl('', [Validators.required]),
-      Email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
-      Comment: new FormControl('', [Validators.required])
-      })*/
+    this.form = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      body: new FormControl(''),
+    });
+  }
+  submit(){
+    console.log(this.form.value);
   }
 
 }
